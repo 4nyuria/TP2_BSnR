@@ -1,9 +1,11 @@
 Resuelva los siguientes ejercicios en un único archivo de texto (o repositorio) organizado por punto. Cada
 documento JSON entregado debe ser sintácticamente válido: verifique su validez con un validador online (por
 ejemplo jsonlint.com) o con la extensión de su editor antes de entregar.
+
 Ejercicio 1 — JSON mal formado — detección y corrección
 El siguiente fragmento contiene varios errores de sintaxis. Identifique cada error, explique por qué es inválido y
 reescriba una versión corregida.
+
 {
  nombre: 'Carlos Ruiz',
  "activo": True,
@@ -11,6 +13,7 @@ reescriba una versión corregida.
  "tags": ["vip", "mayorista",],
  "ultimaCompra": 2026-01-15,
 }
+
 Entregue: (a) el listado de errores encontrados con una breve justificación de cada uno, y (b) el JSON corregido.
 
 Ejercicio 2 — Modelado de una entidad simple
@@ -45,7 +48,6 @@ esquema debe exigir como mínimo: campos obligatorios (required), tipos de dato 
 un enum para el campo estado (por ejemplo: "pendiente", "pagado", "enviado", "entregado", "cancelado"), y una
 validación de mínimo (minimum) para las cantidades y precios (no pueden ser negativos).
 Bases de Datos Avanzadas · MongoDB
-Página 7 de 8
 
 Ejercicio 7 — Caso integrador — modelado de un e-commerce
 Diseñe el modelo de datos en JSON para una tienda en línea simplificada, compuesto por tres tipos de
