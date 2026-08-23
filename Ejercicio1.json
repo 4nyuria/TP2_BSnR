@@ -1,0 +1,17 @@
+{
+     "nombre": "Carlos Ruiz",
+     "activo": true,
+     "puntaje": 8.5,
+     "tags": ["vip", "mayorista"],
+     "ultimaCompra": "2026-01-15"
+   }
+/*   
+	1) Claves sin comillas: nombre debe escribirse entre 2 comillas, lo mismo para representar strings
+    2) JSON utiliza true y false en minúsculas
+    3) Coma final en el array tags no permite una coma después del último elemento de un
+       array
+    4) Fecha sin comillas
+    5) La coma después de ultimaCompra es inválida
+      porque no puede existir una coma después de la última propiedad del
+      objeto
+ */

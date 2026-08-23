@@ -1,0 +1,47 @@
+//Embebida, todo dentro del file de pelicula
+{
+      "_id": "PEL001",
+      "titulo": "El viaje final",
+      "anio": 2026,
+      "genero": "Ciencia ficción",
+      "resenas": [
+        {
+          "usuarioId": "USR001",
+          "usuario": "Ana",
+          "puntuacion": 5,
+          "comentario": "Excelente película."
+        },
+        {
+          "usuarioId": "USR002",
+          "usuario": "Pedro",
+          "puntuacion": 4,
+          "comentario": "Muy entretenida."
+        }
+      ]
+    }
+//Referenciada, un documento la pelicula y otro para usuario
+//Documento de película:
+
+    {
+      "_id": "PEL001",
+      "titulo": "El viaje final",
+      "anio": 2026,
+      "genero": "Ciencia ficción"
+    }
+
+//Documento de reseña:
+
+    {
+      "_id": "REV001",
+      "peliculaId": "PEL001",
+      "usuarioId": "USR001",
+      "puntuacion": 5,
+      "comentario": "Excelente película."
+    }
+/*
+Para este caso recomendaría utilizar referencing,porque una película puede recibir
+miles de reseñas. Al utilizar referencing,
+cada reseña es un documento independiente, lo que facilita su consulta,
+actualización,etc.
+
+*/

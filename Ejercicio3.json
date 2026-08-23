@@ -1,0 +1,42 @@
+{
+  "idOrden": "ORD-2026-001",
+   "fecha": "2026-08-23",
+   "cliente": {
+   "idCliente": "CLI-100",
+   "nombre": "María González",
+   "email": "maria.gonzalez@example.com"
+},
+   "productos": [
+          {
+           "idProducto": "P001",
+            "nombre": "Teclado mecánico",
+            "cantidad": 1,
+            "precioUnitario": 75000
+          },
+          {
+            "idProducto": "P002",
+            "nombre": "Mouse inalámbrico",
+            "cantidad": 2,
+            "precioUnitario": 25000
+           },
+           {
+             "idProducto": "P003",
+             "nombre": "Alfombrilla gamer",
+             "cantidad": 1,
+             "precioUnitario": 15000
+           }
+               ],
+"direccionEnvio": {
+  "calle": "Av. San Martín",
+  "numero": 1250,
+  "ciudad": "Mendoza",
+  "provincia": "Mendoza",
+  "codigoPostal": "5500"},
+     "estado": "pagado",
+     "total": 140000
+   }
+
+/*   -   1 × 75000 = 75000
+   -   2 × 25000 = 50000
+   -   1 × 15000 = 15000
+   -   Total = 140000

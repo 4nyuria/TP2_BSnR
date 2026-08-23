@@ -1,0 +1,51 @@
+{
+      "_id": "ORD001",
+      "usuarioId": "USR001",
+      "fecha": "2026-08-23",
+      "estado": "enviado",
+      "items": [
+        {
+          "productoId": "PROD001",
+          "nombreProducto": "Auriculares inalámbricos",
+          "cantidad": 2,
+          "precioUnitario": 45000,
+          "subtotal": 90000
+        },
+        {
+          "productoId": "PROD002",
+          "nombreProducto": "Teclado mecánico",
+          "cantidad": 1,
+          "precioUnitario": 75000,
+          "subtotal": 75000
+        }
+      ],
+      "direccionEnvio": {
+        "calle": "Belgrano",
+        "numero": 850,
+        "ciudad": "Mendoza",
+        "provincia": "Mendoza",
+        "codigoPostal": "5500"
+      },
+      "total": 165000
+    }
+
+/*usuarioId es una referencia al documento de la colección
+usuarios. Se utiliza referencing porque un usuario puede tener muchos
+pedidos y no conviene duplicar toda la información del usuario en cada
+pedido
+
+items es un array embebido porque las líneas de productos
+forman parte del pedido y normalmente se consultan junto con él. 
+Dentro de cada item se mantiene productoId como referencia al
+producto 
+
+También se conserva nombreProducto y precioUnitario como una
+copia histórica de los datos utilizados en el momento de la compra. Esto
+es importante porque el nombre o precio actual del producto puede
+cambiar posteriormente
+
+direccionEnvio se modeló embebida porque
+representa la dirección utilizada específicamente para ese pedido.
+Además, conservarla dentro del pedido permite mantener el historial
+aunque el usuario cambie su dirección principal
+*/

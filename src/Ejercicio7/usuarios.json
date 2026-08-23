@@ -1,0 +1,22 @@
+{
+  "_id": "USR001",
+  "nombre": "Pepe",
+  "email": "pepe.ramirez@example.com",
+  "activo": true,
+  "direccionPrincipal": {
+    "calle": "Belgrano",
+    "numero": 850,
+    "ciudad": "Mendoza",
+    "provincia": "Mendoza",
+    "codigoPostal": "5500"
+  }
+}
+/*
+La dirección principal se modeló como embebida porque
+pertenece directamente al usuario, tiene una estructura pequeña y
+normalmente se consulta junto con los datos del usuario
+Los pedidos no se embeben dentro del usuario. Se mantienen como documentos
+independientes y referencian al usuario mediante usuarioId, porque un
+usuario puede realizar muchos pedidos y la cantidad puede crecer
+indefinidamente
+*/

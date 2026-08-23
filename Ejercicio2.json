@@ -1,0 +1,23 @@
+//Estudiantes
+{
+      "id": 1001,
+      "nombre": "Lucía Fernández",
+      "edad": 23,
+      "activo": true,
+      "promedio": 8.75,
+      "materiasCursadas": [
+        "Bases de Datos Avanzadas",
+        "Programación II",
+        "Diseño de Software"
+      ],
+      "datosContacto": {
+        "email": "lucia.fernandez@example.com",
+        "telefono": "2615551234",
+        "domicilio": "Calle Falsa 123"
+      },
+      "beca": null
+    }
+/*	El campo beca tiene valor null porque actualmente no se conoce si el
+	estudiante recibió o no una beca
+	No significa necesariamente que el estudiante no tenga beca 
+	sino que el dato es desconocido */

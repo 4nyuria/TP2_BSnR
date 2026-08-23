@@ -1,0 +1,114 @@
+{
+      "$schema": "https://json-schema.org/draft/2020-12/schema",
+      "title": "Orden de Compra",
+      "type": "object",
+      "required": [
+        "idOrden",
+        "fecha",
+        "cliente",
+        "productos",
+        "direccionEnvio",
+        "estado",
+        "total"
+      ],
+      "properties": {
+        "idOrden": {
+          "type": "string"
+        },
+        "fecha": {
+          "type": "string",
+          "format": "date"
+        },
+        "cliente": {
+          "type": "object",
+          "required": [
+            "idCliente",
+            "nombre",
+            "email"
+          ],
+          "properties": {
+            "idCliente": {
+              "type": "string"
+            },
+            "nombre": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string",
+              "format": "email"
+            }
+          }
+        },
+        "productos": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "idProducto",
+              "nombre",
+              "cantidad",
+              "precioUnitario"
+            ],
+            "properties": {
+              "idProducto": {
+                "type": "string"
+              },
+              "nombre": {
+                "type": "string"
+              },
+              "cantidad": {
+                "type": "number",
+                "minimum": 0
+              },
+              "precioUnitario": {
+                "type": "number",
+                "minimum": 0
+              }
+            }
+          }
+        },
+        "direccionEnvio": {
+          "type": "object",
+          "required": [
+            "calle",
+            "numero",
+            "ciudad",
+            "provincia",
+            "codigoPostal"
+          ],
+          "properties": {
+            "calle": {
+              "type": "string"
+            },
+            "numero": {
+              "type": "number",
+              "minimum": 0
+            },
+            "ciudad": {
+              "type": "string"
+            },
+            "provincia": {
+              "type": "string"
+            },
+            "codigoPostal": {
+              "type": "string"
+            }
+          }
+        },
+        "estado": {
+          "type": "string",
+          "enum": [
+            "pendiente",
+            "pagado",
+            "enviado",
+            "entregado",
+            "cancelado"
+          ]
+        },
+        "total": {
+          "type": "number",
+          "minimum": 0
+        }
+      }
+    }

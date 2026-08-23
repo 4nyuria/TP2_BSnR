@@ -1,0 +1,32 @@
+{
+     "isbn": "9789501234567",
+     "titulo": "Introducción a las Bases de Datos",
+     "anioPublicacion": 2025,
+     "autores": [
+       {
+         "nombre": "Laura Martínez",
+         "pais": "Argentina"
+       },
+       {
+         "nombre": "Carlos Pérez",
+         "pais": "Chile"
+       }
+     ],
+     "categorias": [
+       "Bases de Datos",
+       "Informática",
+       "Educación"
+     ]
+   }
+/*
+Los autores se modelaron como un array de objetos porque cada autor
+posee varios atributos 
+Cada elemento del array puede almacenar info completa sobre un
+autor y se pueden agregar nuevos datos en el futuro sin modificar la
+estructura general del documento
+
+En cambio, las categorías se modelaron
+como un array de strings porque solamente necesitamos almacenar el
+nombre de cada género o categoría y no se requieren atributos
+adicionales para ellas
+*/

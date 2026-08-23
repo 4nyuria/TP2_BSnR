@@ -1,0 +1,25 @@
+    {
+      "_id": "PROD001",
+      "nombre": "Auriculares inalámbricos",
+      "descripcion": "Auriculares Bluetooth con micrófono",
+      "precio": 45000,
+      "stock": 25,
+      "categorias": [
+        "Audio",
+        "Tecnología"
+      ],
+      "fabricante": {
+        "nombre": "TechSound",
+        "pais": "Argentina"
+      }
+    }
+
+/*Las categorías se modelaron como un array embebido de
+strings porque son datos simples asociados al producto
+El fabricante se modeló como objeto embebido porque en este ejemplo solamente se
+necesitan unos pocos datos y se consulta junto con el producto
+Los pedidos referencian productos mediante productoId en sus líneas de
+pedido, en lugar de copiar el documento completo del producto. 
+Esto evita duplicar información que puede cambiar, como el stock o la
+descripción
+*/
